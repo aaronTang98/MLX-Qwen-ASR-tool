@@ -17,7 +17,7 @@
 
 ```bash
 # 进入项目目录
-cd /Users/tanglei/workspace/SREProject/MLX-Qwen3-ASR
+cd MLX-Qwen-ASR-tool
 
 # 赋予执行权限
 chmod +x run-webui.sh

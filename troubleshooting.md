@@ -425,7 +425,7 @@ sysctl -n machdep.cpu.brand_string
 ./uninstall.sh
 
 # 重新运行安装脚本
-cd /Users/tanglei/workspace/SREProject/MLX-Qwen3-ASR
+cd MLX-Qwen-ASR-tool
 chmod +x install.sh
 ./install.sh
 ```

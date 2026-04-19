@@ -24,7 +24,7 @@
 
 ```bash
 # 进入安装目录
-cd /Users/tanglei/workspace/SREProject/MLX-Qwen3-ASR
+cd MLX-Qwen-ASR-tool
 
 # 赋予脚本执行权限
 chmod +x install.sh
@@ -98,7 +98,7 @@ MLX-Qwen3-ASR/
 
 ```bash
 # 进入安装目录
-cd /Users/tanglei/workspace/SREProject/MLX-Qwen3-ASR
+cd MLX-Qwen-ASR-tool
 
 # 运行下载脚本
 ./download_models.sh
@@ -134,7 +134,7 @@ cd /Users/tanglei/workspace/SREProject/MLX-Qwen3-ASR
 
 ```bash
 # 进入安装目录
-cd /Users/tanglei/workspace/SREProject/MLX-Qwen3-ASR
+cd MLX-Qwen-ASR-tool
 
 # 赋予执行权限
 chmod +x run-webui.sh
@@ -153,7 +153,7 @@ chmod +x run-webui.sh
 
 ```bash
 # 进入安装目录
-cd /Users/tanglei/workspace/SREProject/MLX-Qwen3-ASR
+cd MLX-Qwen-ASR-tool
 
 # 赋予脚本执行权限
 chmod +x uninstall.sh

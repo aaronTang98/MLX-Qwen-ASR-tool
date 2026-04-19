@@ -78,5 +78,9 @@ echo_info "请在浏览器中打开上述地址"
 echo "====================================="
 echo ""
 
-cd /Users/tanglei/workspace/SREProject/MLX-Qwen3-ASR/webui
+SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+if [ ! -d "$SCRIPT_DIR/webui" ]; then
+    error_exit "webui目录不存在，请确保项目结构完整"
+fi
+cd "$SCRIPT_DIR/webui"
 $(which python) server.py
