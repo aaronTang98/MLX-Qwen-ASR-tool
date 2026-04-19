@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLX-Qwen3-ASR - 本地语音转文字</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎙️ MLX-Qwen3-ASR</h1>
+            <p>本地语音识别，隐私保护，Apple Silicon 优化</p>
+        </header>
+
+        <main>
+            <section class="upload-section">
+                <div id="drop-area" class="drop-area">
+                    <div class="drop-content">
+                        <div class="upload-icon">📁</div>
+                        <p>拖拽音频文件到这里<br>或点击选择文件</p>
+                        <input type="file" id="file-input" accept="audio/*" hidden>
+                        <button type="button" id="select-btn" class="select-btn">选择文件</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="options-section">
+                <h3>识别选项</h3>
+                <div class="options-grid">
+                    <div class="option-item">
+                        <label>模型选择</label>
+                        <select id="model-select">
+                            <option value="Qwen/Qwen3-ASR-0.6B" selected>0.6B (更快)</option>
+                            <option value="Qwen/Qwen3-ASR-1.7B">1.7B (更精准)</option>
+                        </select>
+                        <div class="model-status" id="model-status"></div>
+                    </div>
+                    <div class="option-item">
+                        <label>
+                            <input type="checkbox" id="timestamps-checkbox">
+                            添加时间戳
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="progress-section" id="progress-section" style="display: none;">
+                <h3>处理中...</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <p class="progress-text" id="progress-text">正在上传...</p>
+            </section>
+
+            <section class="result-section" id="result-section" style="display: none;">
+                <h3>识别结果</h3>
+                <div class="result-header">
+                    <span class="time-info" id="time-info"></span>
+                    <div class="result-actions">
+                        <button id="copy-btn" class="icon-btn" title="复制结果">📋 复制</button>
+                        <button id="download-btn" class="icon-btn" title="下载文本">⬇️ 下载</button>
+                    </div>
+                </div>
+                <div class="result-content" id="result-content"></div>
+            </section>
+
+            <section class="error-section" id="error-section" style="display: none;">
+                <h3>❌ 出错了</h3>
+                <div class="error-content" id="error-content"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>MLX-Qwen3-ASR - 本地运行，保护隐私 | 基于 Apple Silicon MLX 框架优化</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
